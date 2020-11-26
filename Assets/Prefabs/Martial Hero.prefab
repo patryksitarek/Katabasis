@@ -202,7 +202,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 4294967295
-  navMeshAgent: {fileID: 297856373}
+  agent: {fileID: 297856373}
 --- !u!195 &297856373
 NavMeshAgent:
   m_ObjectHideFlags: 0
