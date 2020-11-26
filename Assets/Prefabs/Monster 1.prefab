@@ -143,7 +143,8 @@ GameObject:
   - component: {fileID: 8526376780734622582}
   - component: {fileID: 8526376780734622583}
   - component: {fileID: 8526376780734622580}
-  - component: {fileID: 8526376780734622581}
+  - component: {fileID: 1247723723964578969}
+  - component: {fileID: 6889146536806587580}
   m_Layer: 0
   m_Name: Monster 1
   m_TagString: Untagged
@@ -202,25 +203,54 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.45111084
-  m_Height: 1.2485137
+  m_Height: 1.2403164
   m_Direction: 1
-  m_Center: {x: -0.020965576, y: 0.01620698, z: 0.014009476}
---- !u!95 &8526376780734622581
-Animator:
-  serializedVersion: 3
+  m_Center: {x: -0.020965576, y: 0.012108326, z: 0.014009476}
+--- !u!114 &1247723723964578969
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8526376780734622538}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 04c08514ad7bbd0458d20c6fae833282, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b02a9fae76f1cc4a8200bd689955e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faction: 1
+  maxHealth: 400
+  attackDamage: 20
+  attackRange: 0.5
+  attackWidth: 0.5
+  knockbackForce: 1
+  hitDelay: 0.3
+  attackCooldown: 0.3
+  animator: {fileID: 8526376780179587135}
+  attackPoint: {fileID: 8526376780619924017}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  agent: {fileID: 6889146536806587580}
+--- !u!195 &6889146536806587580
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8526376780734622538}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.41
+  m_BaseOffset: 0.58
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 0

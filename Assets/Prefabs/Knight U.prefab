@@ -144,6 +144,8 @@ GameObject:
   - component: {fileID: 7509236774148308143}
   - component: {fileID: 7509236774148308142}
   - component: {fileID: 7509236774148308137}
+  - component: {fileID: 4310399180136262727}
+  - component: {fileID: 989618810338294020}
   m_Layer: 0
   m_Name: Knight U
   m_TagString: Untagged
@@ -205,3 +207,51 @@ CapsuleCollider:
   m_Height: 0.960629
   m_Direction: 1
   m_Center: {x: -0.020965576, y: -0.12773538, z: -0.004309058}
+--- !u!114 &4310399180136262727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7509236774148308149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b02a9fae76f1cc4a8200bd689955e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faction: 0
+  maxHealth: 400
+  attackDamage: 20
+  attackRange: 0.5
+  attackWidth: 0.5
+  knockbackForce: 2
+  hitDelay: 0.3
+  attackCooldown: 0.3
+  animator: {fileID: 7509236773325164152}
+  attackPoint: {fileID: 7509236773532550160}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  agent: {fileID: 989618810338294020}
+--- !u!195 &989618810338294020
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7509236774148308149}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.29
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.76
+  m_BaseOffset: 0.55
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 0

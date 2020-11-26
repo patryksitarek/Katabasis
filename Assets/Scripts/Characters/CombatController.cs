@@ -18,7 +18,7 @@ public class CombatController : MonoBehaviour
     public Animator animator;
     public Transform attackPoint;
     public LayerMask enemyLayer;
-    public NavMeshAgent navMeshAgent;
+    public NavMeshAgent agent;
 
     private float currHealth;
     private bool isDead = false;
@@ -28,6 +28,7 @@ public class CombatController : MonoBehaviour
     void Start()
     {
         currHealth = maxHealth;
+        agent.updateRotation = false; // TODO: Move into movement script
     }
     public Collider[] GetHitObjects()
     {
@@ -74,7 +75,7 @@ public class CombatController : MonoBehaviour
         attackOnCooldown = false;
     }
 
-    public void TakeDamage(int damage, Vector3 enemyPosition, float knockback)
+    public void TakeDamage(int damage, Vector3 enemyPosition, float knockbackForce)
     {
         if (isDead) return;
 
@@ -84,7 +85,9 @@ public class CombatController : MonoBehaviour
         // Take damage
         currHealth -= damage;
 
-        // TODO: Apply knockback
+        // Apply knockback
+        Vector3 direction = transform.position - enemyPosition;
+        agent.velocity = direction * knockbackForce;
 
         // Check if dead
         if (currHealth <= 0)
