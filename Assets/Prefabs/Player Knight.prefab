@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710418504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.97, y: -0.53, z: 0}
+  m_LocalPosition: {x: -0.851, y: -0.516, z: 0.015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8480825008544408288}
@@ -56,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8480825007778962783}
   m_LocalRotation: {x: -0.3420201, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: 0, y: -1.06, z: 0}
+  m_LocalPosition: {x: 0, y: -1.06, z: 0.349}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8480825008544408288}
@@ -103,7 +103,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ae297123f091bbf4e8f1835eb98fb293, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 5.12, y: 2.56}
@@ -142,6 +142,9 @@ GameObject:
   - component: {fileID: 8480825008544408288}
   - component: {fileID: 8480825008544408295}
   - component: {fileID: 8480825008544408294}
+  - component: {fileID: 1934186540}
+  - component: {fileID: 1934186541}
+  - component: {fileID: 6366468732347455811}
   m_Layer: 0
   m_Name: Player Knight
   m_TagString: Player
@@ -195,3 +198,68 @@ CapsuleCollider:
   m_Height: 1.4
   m_Direction: 1
   m_Center: {x: 0, y: -0.524, z: 0}
+--- !u!195 &1934186540
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8480825008544408292}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.13
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 0
+--- !u!114 &1934186541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8480825008544408292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbaed093be2dd15409f4ea5c794d3195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 5.22
+  animator: {fileID: 8480825007778962776}
+  agent: {fileID: 1934186540}
+  combatController: {fileID: 6366468732347455811}
+  facingRight: 1
+--- !u!114 &6366468732347455811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8480825008544408292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b02a9fae76f1cc4a8200bd689955e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faction: 0
+  maxHealth: 2000
+  attackDamage: 40
+  attackRange: 0.5
+  attackWidth: 0.8
+  knockbackForce: 1
+  hitDelay: 0.3
+  attackCooldown: 0.5
+  animator: {fileID: 8480825007778962776}
+  attackPoint: {fileID: 710418505}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  navMeshAgent: {fileID: 1934186540}
