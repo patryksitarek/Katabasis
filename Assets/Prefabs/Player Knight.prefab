@@ -214,7 +214,6 @@ MonoBehaviour:
   animator: {fileID: 8480825007778962776}
   agent: {fileID: 1934186540}
   combatController: {fileID: 6366468732347455811}
-  facingRight: 1
 --- !u!114 &6366468732347455811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,8 +227,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faction: 0
-  maxHealth: 2000
   attackDamage: 40
+  maxHealth: 2000
   attackRange: 0.5
   attackWidth: 0.8
   knockbackForce: 1
@@ -237,10 +236,13 @@ MonoBehaviour:
   attackCooldown: 0.5
   animator: {fileID: 8480825007778962776}
   attackPoint: {fileID: 710418505}
+  agent: {fileID: 1934186540}
+  targettingHandler: {fileID: 0}
+  target: {fileID: 0}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 4294967295
-  agent: {fileID: 1934186540}
+  numAttackAnims: 3
 --- !u!195 &1934186540
 NavMeshAgent:
   m_ObjectHideFlags: 0

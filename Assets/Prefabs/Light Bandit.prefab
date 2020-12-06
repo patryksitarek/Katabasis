@@ -41,7 +41,9 @@ GameObject:
   - component: {fileID: 5900410513984566896}
   - component: {fileID: 5900410513984566897}
   - component: {fileID: 5900410513984566898}
+  - component: {fileID: 4685889843969778451}
   - component: {fileID: 1589998089}
+  - component: {fileID: 1153747285959922722}
   - component: {fileID: 1589998092}
   m_Layer: 0
   m_Name: Light Bandit
@@ -96,6 +98,22 @@ CapsuleCollider:
   m_Height: 1.1208787
   m_Direction: 1
   m_Center: {x: -0.027144074, y: -0.008636713, z: 0}
+--- !u!114 &4685889843969778451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5900410513984566899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4250c4f1721773644ac8663dfbba0c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targettingHandler: {fileID: 1153747285959922722}
+  agent: {fileID: 1589998092}
+  combatController: {fileID: 1589998089}
+  animator: {fileID: 5900410514789262578}
 --- !u!114 &1589998089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,19 +127,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faction: 1
-  maxHealth: 400
-  attackDamage: 20
+  attackDamage: 2000
+  maxHealth: 40
   attackRange: 0.41
   attackWidth: 0.8
   knockbackForce: 0.3
   hitDelay: 0.3
-  attackCooldown: 0.3
+  attackCooldown: 0.7
   animator: {fileID: 5900410514789262578}
   attackPoint: {fileID: 5900410513299131683}
+  agent: {fileID: 1589998092}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 4294967295
-  navMeshAgent: {fileID: 1589998092}
+--- !u!114 &1153747285959922722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5900410513984566899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3672a9f687ce9574587c83af9ae8626d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  center: {fileID: 5900410513984566896}
+  aggroRange: 7.7
+  target: {fileID: 0}
+  overrideTarget: {fileID: 0}
 --- !u!195 &1589998092
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -136,7 +170,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1.4
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

@@ -113,9 +113,10 @@ GameObject:
   - component: {fileID: 6300048784874142467}
   - component: {fileID: 6300048784874142466}
   - component: {fileID: 6300048784874142469}
-  - component: {fileID: 6300048784874142468}
   - component: {fileID: 292911635}
   - component: {fileID: 292911634}
+  - component: {fileID: 184905327}
+  - component: {fileID: 184905328}
   m_Layer: 0
   m_Name: Skeleton 2
   m_TagString: Untagged
@@ -177,25 +178,6 @@ CapsuleCollider:
   m_Height: 1.2485137
   m_Direction: 1
   m_Center: {x: -0.020965576, y: 0.01620698, z: 0.014009476}
---- !u!95 &6300048784874142468
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6300048784874142471}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 04c08514ad7bbd0458d20c6fae833282, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &292911635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,19 +191,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faction: 1
+  attackDamage: 2000
   maxHealth: 400
-  attackDamage: 20
   attackRange: 0.4
   attackWidth: 0.7
   knockbackForce: 1
   hitDelay: 0.3
-  attackCooldown: 0.5
+  attackCooldown: 1
   animator: {fileID: 6300048784789376963}
   attackPoint: {fileID: 6300048785217169252}
+  agent: {fileID: 292911634}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 4294967295
-  agent: {fileID: 292911634}
 --- !u!195 &292911634
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -236,7 +218,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1.4
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -244,6 +226,38 @@ NavMeshAgent:
   m_BaseOffset: 0.53
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
+--- !u!114 &184905327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6300048784874142471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4250c4f1721773644ac8663dfbba0c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targettingHandler: {fileID: 184905328}
+  agent: {fileID: 292911634}
+  combatController: {fileID: 292911635}
+  animator: {fileID: 6300048784789376963}
+--- !u!114 &184905328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6300048784874142471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3672a9f687ce9574587c83af9ae8626d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  center: {fileID: 6300048784874142464}
+  aggroRange: 7
+  target: {fileID: 0}
+  overrideTarget: {fileID: 0}
 --- !u!1 &6300048785217169255
 GameObject:
   m_ObjectHideFlags: 0

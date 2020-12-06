@@ -88,8 +88,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faction: 0
-  maxHealth: 400
   attackDamage: 20
+  maxHealth: 400
   attackRange: 0.3
   attackWidth: 0.6
   knockbackForce: 1
@@ -97,10 +97,13 @@ MonoBehaviour:
   attackCooldown: 0.3
   animator: {fileID: 5372710970614027251}
   attackPoint: {fileID: 5372710970501760912}
+  agent: {fileID: 5258503633068132042}
+  targettingHandler: {fileID: 0}
+  target: {fileID: 0}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 4294967295
-  agent: {fileID: 5258503633068132042}
+  numAttackAnims: 2
 --- !u!195 &5258503633068132042
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -7,8 +7,8 @@ public class CombatController : MonoBehaviour
 {
     public enum Faction { Ally, Enemy }
     public Faction faction;
-    public float maxHealth;
     public int attackDamage;
+    public float maxHealth;
     public float attackRange;
     public float attackWidth;
     public float knockbackForce;
@@ -17,19 +17,21 @@ public class CombatController : MonoBehaviour
 
     public Animator animator;
     public Transform attackPoint;
-    public LayerMask enemyLayer;
     public NavMeshAgent agent;
+    public LayerMask enemyLayer;
 
     private float currHealth;
-    private bool isDead = false;
+    public bool isDead { private set; get; } = false;
     private bool attackOnCooldown = false;
+    // Attack animation variation
+    //[SerializeField]
+    //private int numAttackAnims = 1;
 
-    // Start is called before the first frame update
     void Start()
     {
         currHealth = maxHealth;
-        agent.updateRotation = false; // TODO: Move into movement script
     }
+
     public Collider[] GetHitObjects()
     {
         Vector3 offset = new Vector3(0, 0, attackWidth);
@@ -42,6 +44,7 @@ public class CombatController : MonoBehaviour
         if (isDead || attackOnCooldown) return;
 
         // Play animation
+        // animator.SetInteger("useAttackAnim", 0);
         animator.SetTrigger("Attack");
 
         // Get targets and deal damage
@@ -49,7 +52,6 @@ public class CombatController : MonoBehaviour
 
         // Start attack cooldown
         attackOnCooldown = true;
-        StartCoroutine(HandleAttackCooldown());
     }
 
     private IEnumerator HandleAttacking()
@@ -67,6 +69,7 @@ public class CombatController : MonoBehaviour
                 target.TakeDamage(attackDamage, transform.position, knockbackForce);
             }
         }
+        StartCoroutine(HandleAttackCooldown());
     }
 
     private IEnumerator HandleAttackCooldown()
@@ -102,16 +105,24 @@ public class CombatController : MonoBehaviour
         animator.SetTrigger("Death");
 
         isDead = true;
-    }
 
-    public bool isImmobilized()
+        StartCoroutine(DeleteObject(3));
+    }
+    public bool IsImmobilized()
     {
         return isDead;
     }
 
+    private IEnumerator DeleteObject(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        GameObject.Destroy(gameObject);
+    }
+
     private void OnDrawGizmosSelected()
     {
-        if (attackPoint == null || attackRange == null)
+        if (attackPoint == null)
         {
             return;
         }

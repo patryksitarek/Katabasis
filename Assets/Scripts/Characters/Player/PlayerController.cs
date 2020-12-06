@@ -10,16 +10,17 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public NavMeshAgent agent;
     public CombatController combatController;
-    public bool facingRight;
+    private bool facingRight;
 
     void Start()
     {
         agent.updateRotation = false;
+        facingRight = transform.localScale.x > 0;
     }
     
     void FixedUpdate()
     {
-        if (combatController.isImmobilized()) return;
+        if (combatController.IsImmobilized()) return;
 
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
