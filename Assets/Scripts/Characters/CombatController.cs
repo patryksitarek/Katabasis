@@ -15,6 +15,11 @@ public class CombatController : MonoBehaviour
     public float hitDelay; // delay between attack and hit (for syncing animations)
     public float attackCooldown; // cooldown to prevent attack spam
 
+    public int dmgBoostValue = 2;
+    public int hpBoostValue = 1000;
+    private int coins = 0;
+    private bool resistant = false;
+
     public Animator animator;
     public Transform attackPoint;
     public NavMeshAgent agent;
@@ -82,12 +87,15 @@ public class CombatController : MonoBehaviour
     {
         if (isDead) return;
 
-        // Play animation
-        animator.SetTrigger("Hurt");
 
-        // Take damage
-        currHealth -= damage;
+        if (!resistant)
+        {
+            // Play animation
+            animator.SetTrigger("Hurt");
 
+            // Take damage
+            currHealth -= damage;
+        }
         // Apply knockback
         Vector3 direction = transform.position - enemyPosition;
         agent.velocity = direction * knockbackForce;
@@ -133,5 +141,57 @@ public class CombatController : MonoBehaviour
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
         Debug.DrawLine(attackPoint.position - offset, attackPoint.position + offset);
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        
+
+        if (gameObject.tag == "Player")
+        {
+            float duration = Random.Range(5.0f, 15.0f);
+
+            switch (collision.gameObject.tag)
+            {
+                case "damageBoost":
+                    StartCoroutine(damageBoost(duration));
+                    break;
+                case "healthBoost":
+                    currHealth += hpBoostValue;
+                    if (currHealth > maxHealth) 
+                    {
+                        currHealth = maxHealth;
+                    }
+                    break;
+                case "coin":
+                    coins++;
+                    if (coins == 10)
+                    {
+                        attackDamage = (int) (attackDamage * 1.1f);
+                        coins = 10;
+                    }
+                    break;
+                case "resistBoost":
+                    StartCoroutine(resistantBoost(duration));
+                    break;
+            }
+            
+            
+            //StartCoroutine(damageBoost(15));
+        }
+    }
+
+    private IEnumerator damageBoost(float time)
+    {
+        attackDamage *= dmgBoostValue;
+        yield return new WaitForSeconds(time);
+        attackDamage /= dmgBoostValue;
+    }
+
+    private IEnumerator resistantBoost(float time)
+    {
+        resistant = true;
+        yield return new WaitForSeconds(time);
+        resistant = false;
     }
 }

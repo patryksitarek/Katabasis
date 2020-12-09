@@ -6,6 +6,11 @@ TagManager:
   tags:
   - NPC
   - Boss
+  - damageBoost
+  - healthBoost
+  - speedBoost
+  - coin
+  - resistBoost
   layers:
   - Default
   - TransparentFX
