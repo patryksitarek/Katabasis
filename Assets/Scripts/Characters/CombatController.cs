@@ -155,6 +155,7 @@ public class CombatController : MonoBehaviour
             {
                 case "damageBoost":
                     StartCoroutine(damageBoost(duration));
+                    Destroy(collision.gameObject);
                     break;
                 case "healthBoost":
                     currHealth += hpBoostValue;
@@ -162,6 +163,7 @@ public class CombatController : MonoBehaviour
                     {
                         currHealth = maxHealth;
                     }
+                    Destroy(collision.gameObject);
                     break;
                 case "coin":
                     coins++;
@@ -170,9 +172,11 @@ public class CombatController : MonoBehaviour
                         attackDamage = (int) (attackDamage * 1.1f);
                         coins = 10;
                     }
+                    Destroy(collision.gameObject);
                     break;
                 case "resistBoost":
                     StartCoroutine(resistantBoost(duration));
+                    Destroy(collision.gameObject);
                     break;
             }
             

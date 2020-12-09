@@ -69,7 +69,8 @@ public class PlayerController : MonoBehaviour
     {
         if (gameObject.tag == "Player" && collision.gameObject.tag == "speedBoost")
         {
-                StartCoroutine(speedBoost(Random.Range(3.0f, 8.0f)));
+            StartCoroutine(speedBoost(Random.Range(3.0f, 8.0f)));
+            Destroy(collision.gameObject);
         }
         
     }
