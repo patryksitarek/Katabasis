@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 1934186541}
   - component: {fileID: 6366468732347455811}
   - component: {fileID: 1934186540}
+  - component: {fileID: 8885298598025434232}
   m_Layer: 0
   m_Name: Player Knight
   m_TagString: Player
@@ -214,6 +215,7 @@ MonoBehaviour:
   animator: {fileID: 8480825007778962776}
   agent: {fileID: 1934186540}
   combatController: {fileID: 6366468732347455811}
+  speedBoostValue: 1.4
 --- !u!114 &6366468732347455811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,15 +236,14 @@ MonoBehaviour:
   knockbackForce: 1
   hitDelay: 0.3
   attackCooldown: 0.5
+  dmgBoostValue: 2
+  hpBoostValue: 1000
   animator: {fileID: 8480825007778962776}
   attackPoint: {fileID: 710418505}
   agent: {fileID: 1934186540}
-  targettingHandler: {fileID: 0}
-  target: {fileID: 0}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 4294967295
-  numAttackAnims: 3
 --- !u!195 &1934186540
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -265,3 +266,20 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
+--- !u!114 &8885298598025434232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8480825008544408292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98452f4577a69d144a1a51496f30c012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  gameOverMenu: {fileID: 0}
+  levelCompleteMenu: {fileID: 0}
+  levelMusic: {fileID: 0}
