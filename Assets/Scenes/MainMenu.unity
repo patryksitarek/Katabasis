@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.27450982, g: 0.1137255, b: 0, a: 1}
+  m_Color: {r: 0.078431375, g: 0.03529412, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2879,7 +2879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e7609871a4b3943a71dc0fc799b15a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelMusic: {fileID: 8300000, guid: a93ce8dd966882c4389385f52048895d, type: 3}
+  levelMusic: {fileID: 8300000, guid: 7e8758aa964065748bfd92cd0784cb4f, type: 3}
 --- !u!114 &1457877258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3255,7 +3255,7 @@ PrefabInstance:
     - target: {fileID: 1694408218144188954, guid: 879c513f969fb9a4589da738c49c969f,
         type: 3}
       propertyPath: m_MinValue
-      value: -40
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 1694408218144188954, guid: 879c513f969fb9a4589da738c49c969f,
         type: 3}
@@ -4849,7 +4849,7 @@ PrefabInstance:
     - target: {fileID: 1694408218144188954, guid: 879c513f969fb9a4589da738c49c969f,
         type: 3}
       propertyPath: m_MinValue
-      value: -40
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 1694408218144188954, guid: 879c513f969fb9a4589da738c49c969f,
         type: 3}
