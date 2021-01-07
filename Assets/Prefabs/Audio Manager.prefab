@@ -41,12 +41,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7085782490689883038}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2144dbfac14de3a4085fc4a99888cfaf, type: 3}
+  m_Script: {fileID: 11500000, guid: 25ffaf57da21b8c4fb5af400c8041f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxMixerGroup: {fileID: -906846621989940601, guid: d65149d95de26cf4ea98059730f88872,
+  sfxMixerGroup: {fileID: -906846621989940601, guid: 43e42d9d26b7698459f19a7a80af3004,
     type: 2}
-  bgmMixerGroup: {fileID: -4785439792390020652, guid: d65149d95de26cf4ea98059730f88872,
+  bgmMixerGroup: {fileID: -4785439792390020652, guid: 43e42d9d26b7698459f19a7a80af3004,
     type: 2}
 --- !u!114 &7085782490689883037
 MonoBehaviour:
@@ -57,7 +57,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7085782490689883038}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e9b278a85435141bdbdbf72e715be9, type: 3}
+  m_Script: {fileID: 11500000, guid: 27e7609871a4b3943a71dc0fc799b15a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelMusic: {fileID: 8300000, guid: 68db71da3f965874fbf8c6646524d4e9, type: 3}
+  levelMusic: {fileID: 0}

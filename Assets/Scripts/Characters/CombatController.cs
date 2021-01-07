@@ -14,6 +14,7 @@ public class CombatController : MonoBehaviour
     public float knockbackForce;
     public float hitDelay; // delay between attack and hit (for syncing animations)
     public float attackCooldown; // cooldown to prevent attack spam
+    public HealthBar healthBar;
 
     public int dmgBoostValue = 2;
     public int hpBoostValue = 1000;
@@ -25,15 +26,20 @@ public class CombatController : MonoBehaviour
     public NavMeshAgent agent;
     public LayerMask enemyLayer;
 
+    public GameFlowController gfc;
+
     private float currHealth;
     public bool isDead { private set; get; } = false;
     private bool attackOnCooldown = false;
+    private SFXController sfxc;
     // Attack animation variation
     //[SerializeField]
     //private int numAttackAnims = 1;
 
     void Start()
     {
+        sfxc = GetComponent<SFXController>();
+        healthBar.SetMaxHealth(maxHealth);
         currHealth = maxHealth;
     }
 
@@ -48,9 +54,10 @@ public class CombatController : MonoBehaviour
         // Do not attack if dead or on cooldown
         if (isDead || attackOnCooldown) return;
 
-        // Play animation
+        // Play animation and sound
         // animator.SetInteger("useAttackAnim", 0);
         animator.SetTrigger("Attack");
+        sfxc.playAttackSound();
 
         // Get targets and deal damage
         StartCoroutine(HandleAttacking());
@@ -95,6 +102,7 @@ public class CombatController : MonoBehaviour
 
             // Take damage
             currHealth -= damage;
+            healthBar.SetHealth(currHealth);
         }
         // Apply knockback
         Vector3 direction = transform.position - enemyPosition;
@@ -111,8 +119,11 @@ public class CombatController : MonoBehaviour
     {
         animator.SetBool("isRunning", false);
         animator.SetTrigger("Death");
+        sfxc.playDeathSound();
 
         isDead = true;
+
+        if (gameObject.CompareTag("Player")) gfc.OnGameOver();
 
         StartCoroutine(DeleteObject(3));
     }

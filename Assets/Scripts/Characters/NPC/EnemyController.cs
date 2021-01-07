@@ -84,5 +84,7 @@ public class EnemyController : MonoBehaviour
         transform.localScale = newScale;
 
         facingRight = !facingRight;
+
+        combatController.healthBar.ToggleOrientation();
     }
 }

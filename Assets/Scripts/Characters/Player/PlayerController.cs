@@ -11,9 +11,11 @@ public class PlayerController : MonoBehaviour
     public CombatController combatController;
     private bool facingRight;
     public float speedBoostValue = 1.4f;
+    private SFXController sfxc;
 
     void Start()
     {
+        sfxc = GetComponent<SFXController>();
         agent.updateRotation = false;
         facingRight = transform.localScale.x > 0;
     }
@@ -42,6 +44,7 @@ public class PlayerController : MonoBehaviour
         if (horizontal != 0 || vertical != 0)
         {
             animator.SetBool("isRunning", true);
+            sfxc.playRunningSound();
         }
         else
         {

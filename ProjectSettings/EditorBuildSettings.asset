@@ -9,14 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 67f625d567e3aa649a2a2d4a1792acbb
   - enabled: 1
+    path: Assets/Scenes/Mine showcase.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
     path: Assets/Scenes/Plains & Forest showcase.unity
     guid: dcefc8736e333ce4685e3b96dfb68bc1
   - enabled: 1
     path: Assets/Scenes/Winter showcase.unity
     guid: 607e855d1a5178b4d9c914cb6e1f2a4d
-  - enabled: 1
-    path: Assets/Scenes/Mine showcase.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Hell showcase.unity
     guid: 846db7f657d7e7a408a8d3d3da253f96
