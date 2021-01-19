@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 2380741983835359150}
   - component: {fileID: 7963028335090060339}
   - component: {fileID: 1045934853168077786}
+  - component: {fileID: 7843019567299014941}
   m_Layer: 0
   m_Name: Spear Skeleton
   m_TagString: Untagged
@@ -293,6 +294,19 @@ MonoBehaviour:
   runningSound: {fileID: 8300000, guid: 2297347d09698b848ad3da652b4e9944, type: 3}
   attackSound: {fileID: 8300000, guid: 40e2056f5ca15f64abcd6f903574c8c3, type: 3}
   deathSound: {fileID: 8300000, guid: d02f6620c265792429d37dde034084df, type: 3}
+--- !u!114 &7843019567299014941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6837625347698704855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2511d3b5ee557d040af9acc3c9e723e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot: {fileID: 863128952288078231, guid: 02bf02be867ca7f4ca5c4542b787484c, type: 3}
 --- !u!1001 &4837105459342468923
 PrefabInstance:
   m_ObjectHideFlags: 0

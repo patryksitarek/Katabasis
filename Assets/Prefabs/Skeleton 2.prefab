@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 184905327}
   - component: {fileID: 184905328}
   - component: {fileID: 7981612991878179192}
+  - component: {fileID: 7438465733604714773}
   m_Layer: 0
   m_Name: Skeleton 2
   m_TagString: Untagged
@@ -280,6 +281,19 @@ MonoBehaviour:
   runningSound: {fileID: 8300000, guid: 8cfd47c86b81d24488795468995eae2f, type: 3}
   attackSound: {fileID: 8300000, guid: 2297347d09698b848ad3da652b4e9944, type: 3}
   deathSound: {fileID: 8300000, guid: d02f6620c265792429d37dde034084df, type: 3}
+--- !u!114 &7438465733604714773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6300048784874142471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2511d3b5ee557d040af9acc3c9e723e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot: {fileID: 6947858351035090841, guid: 7fa24a8fc22598047a15137cd2d4d95b, type: 3}
 --- !u!1 &6300048785217169255
 GameObject:
   m_ObjectHideFlags: 0

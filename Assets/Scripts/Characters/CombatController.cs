@@ -32,6 +32,7 @@ public class CombatController : MonoBehaviour
     public bool isDead { private set; get; } = false;
     private bool attackOnCooldown = false;
     private SFXController sfxc;
+    private LootDropper dropper;
     // Attack animation variation
     //[SerializeField]
     //private int numAttackAnims = 1;
@@ -39,6 +40,7 @@ public class CombatController : MonoBehaviour
     void Start()
     {
         sfxc = GetComponent<SFXController>();
+        dropper = GetComponent<LootDropper>();
         healthBar.SetMaxHealth(maxHealth);
         currHealth = maxHealth;
     }
@@ -124,6 +126,8 @@ public class CombatController : MonoBehaviour
         isDead = true;
 
         if (gameObject.CompareTag("Player")) gfc.OnGameOver();
+        else if (gameObject.CompareTag("Boss")) gfc.OnGameOver();
+        else dropper.DropLoot();
 
         StartCoroutine(DeleteObject(3));
     }

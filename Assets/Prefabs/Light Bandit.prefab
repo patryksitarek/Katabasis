@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 1153747285959922722}
   - component: {fileID: 1589998092}
   - component: {fileID: 5418590303891283845}
+  - component: {fileID: 637090501070947039}
   m_Layer: 0
   m_Name: Light Bandit
   m_TagString: NPC
@@ -200,6 +201,19 @@ MonoBehaviour:
   runningSound: {fileID: 8300000, guid: dcc66c3af2924fc43ad118319a7460a0, type: 3}
   attackSound: {fileID: 8300000, guid: 40e2056f5ca15f64abcd6f903574c8c3, type: 3}
   deathSound: {fileID: 8300000, guid: d02f6620c265792429d37dde034084df, type: 3}
+--- !u!114 &637090501070947039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5900410513984566899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2511d3b5ee557d040af9acc3c9e723e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot: {fileID: 6947858351035090841, guid: 7fa24a8fc22598047a15137cd2d4d95b, type: 3}
 --- !u!1 &5900410514789262540
 GameObject:
   m_ObjectHideFlags: 0

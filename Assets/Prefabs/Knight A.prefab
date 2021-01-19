@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5258503633068132042}
   - component: {fileID: 3079145314314245649}
   - component: {fileID: 7266883642775000401}
+  - component: {fileID: 4578857477946241890}
   m_Layer: 0
   m_Name: Knight A
   m_TagString: Untagged
@@ -33,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 5372710970043752068}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 205.07, y: 0.538, z: 4.837}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 5372710970614027249}
   - {fileID: 5372710970501760912}
@@ -179,6 +180,20 @@ MonoBehaviour:
   agent: {fileID: 5258503633068132042}
   combatController: {fileID: 5230627005925904037}
   animator: {fileID: 5372710970614027251}
+--- !u!114 &4578857477946241890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5372710970043752068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2511d3b5ee557d040af9acc3c9e723e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot: {fileID: 863128952288078231, guid: 02bf02be867ca7f4ca5c4542b787484c, type: 3}
+  dropChance: 0.3
 --- !u!1 &5372710970501760915
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +356,7 @@ PrefabInstance:
     - target: {fileID: 2340542948527042038, guid: 7c369a903cc388942bb683520e2cebb8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.431
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 2340542948527042038, guid: 7c369a903cc388942bb683520e2cebb8,
         type: 3}
@@ -391,7 +406,7 @@ PrefabInstance:
     - target: {fileID: 2340542948527042038, guid: 7c369a903cc388942bb683520e2cebb8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.713
+      value: -0.35
       objectReference: {fileID: 0}
     - target: {fileID: 2340542948527042038, guid: 7c369a903cc388942bb683520e2cebb8,
         type: 3}

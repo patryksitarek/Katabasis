@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 1779925271}
   - component: {fileID: 1779925272}
   - component: {fileID: 3173098123966400422}
+  - component: {fileID: 6207031422352711834}
   m_Layer: 0
   m_Name: Heavy Bandit
   m_TagString: Untagged
@@ -310,6 +311,19 @@ MonoBehaviour:
   runningSound: {fileID: 8300000, guid: dcc66c3af2924fc43ad118319a7460a0, type: 3}
   attackSound: {fileID: 8300000, guid: fd6f31ae8b497e348993d8dd01b14551, type: 3}
   deathSound: {fileID: 8300000, guid: d02f6620c265792429d37dde034084df, type: 3}
+--- !u!114 &6207031422352711834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791915483277095118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2511d3b5ee557d040af9acc3c9e723e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot: {fileID: 1373852149006481858, guid: c5f3d6ef315d52b4988bd53856b9a1f0, type: 3}
 --- !u!1001 &8549591544949204688
 PrefabInstance:
   m_ObjectHideFlags: 0

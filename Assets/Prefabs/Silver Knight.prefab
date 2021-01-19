@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 432982398349060613}
   - component: {fileID: 1213120202226518175}
   - component: {fileID: 8602950656115363733}
+  - component: {fileID: 5367994957947556029}
   m_Layer: 0
   m_Name: Silver Knight
   m_TagString: Untagged
@@ -311,6 +312,19 @@ MonoBehaviour:
   agent: {fileID: 432982398349060613}
   combatController: {fileID: 4715784126631444298}
   animator: {fileID: 6351070384618172462}
+--- !u!114 &5367994957947556029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6351070386450672450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2511d3b5ee557d040af9acc3c9e723e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot: {fileID: 1373852149006481858, guid: c5f3d6ef315d52b4988bd53856b9a1f0, type: 3}
 --- !u!1001 &1444214990186247046
 PrefabInstance:
   m_ObjectHideFlags: 0

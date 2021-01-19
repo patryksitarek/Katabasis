@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 345537688}
   - component: {fileID: 345537689}
   - component: {fileID: 9133094035759116680}
+  - component: {fileID: 3506295071785105861}
   m_Layer: 0
   m_Name: Martial Hero
   m_TagString: Untagged
@@ -281,6 +282,19 @@ MonoBehaviour:
   runningSound: {fileID: 8300000, guid: d88e6bd959ff29740b3eed6ab266ea36, type: 3}
   attackSound: {fileID: 8300000, guid: 40e2056f5ca15f64abcd6f903574c8c3, type: 3}
   deathSound: {fileID: 8300000, guid: d02f6620c265792429d37dde034084df, type: 3}
+--- !u!114 &3506295071785105861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346719477732159191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2511d3b5ee557d040af9acc3c9e723e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot: {fileID: 3422330102937654058, guid: 0e4c38d18a3e13440a68773764072638, type: 3}
 --- !u!1 &1346719477751188070
 GameObject:
   m_ObjectHideFlags: 0

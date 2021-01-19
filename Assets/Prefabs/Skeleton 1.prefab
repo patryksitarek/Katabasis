@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 3711495829196795911}
   - component: {fileID: -4683396797128538898}
   - component: {fileID: 1851298750746795953}
+  - component: {fileID: 7389954685107613847}
   m_Layer: 0
   m_Name: Skeleton 1
   m_TagString: Untagged
@@ -209,6 +210,20 @@ MonoBehaviour:
   agent: {fileID: 858645981957887691}
   combatController: {fileID: 3118188879453790096}
   animator: {fileID: 6956339306956102197}
+--- !u!114 &7389954685107613847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6956339306829185067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2511d3b5ee557d040af9acc3c9e723e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot: {fileID: 2274321176249641252, guid: 05101f2dd3b42e548bfdf5c2f3a87022, type: 3}
+  dropChance: 0.3
 --- !u!1 &6956339306956102199
 GameObject:
   m_ObjectHideFlags: 0
