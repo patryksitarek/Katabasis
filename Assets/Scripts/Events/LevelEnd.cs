@@ -34,7 +34,7 @@ public class LevelEnd : MonoBehaviour
 
     private IEnumerator EndLevel()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.1f);
 
         GameFlowController gfc = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameFlowController>();
 

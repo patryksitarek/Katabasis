@@ -307,6 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot: {fileID: 863128952288078231, guid: 02bf02be867ca7f4ca5c4542b787484c, type: 3}
+  dropChance: 0.3
 --- !u!1001 &4837105459342468923
 PrefabInstance:
   m_ObjectHideFlags: 0
