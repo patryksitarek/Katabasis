@@ -7,17 +7,17 @@ public class BonusCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            StartCoroutine(DeleteObject(0));
+            Debug.Log("[test] Deleting object");
+            StartCoroutine(DeleteObject(0.1f));
         }
     }
 
     private IEnumerator DeleteObject(float delay)
     {
-        
         yield return new WaitForSeconds(delay);
-
-        GameObject.Destroy(gameObject);
+        Debug.Log("[test] " + transform.parent.gameObject.name);
+        GameObject.Destroy(transform.parent.gameObject);
     }
 }

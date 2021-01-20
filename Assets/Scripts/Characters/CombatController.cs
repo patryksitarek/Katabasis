@@ -178,6 +178,8 @@ public class CombatController : MonoBehaviour
                     {
                         currHealth = maxHealth;
                     }
+                    healthBar.SetHealth(currHealth);
+                    
                     Destroy(collision.gameObject);
                     break;
                 case "coin":

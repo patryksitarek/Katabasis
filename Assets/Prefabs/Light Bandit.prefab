@@ -214,6 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot: {fileID: 6947858351035090841, guid: 7fa24a8fc22598047a15137cd2d4d95b, type: 3}
+  dropChance: 0.3
 --- !u!1 &5900410514789262540
 GameObject:
   m_ObjectHideFlags: 0

@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 6207031422352711834}
   m_Layer: 0
   m_Name: Heavy Bandit
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   maxHealth: 500
   attackRange: 0.45
   attackWidth: 0.7
-  knockbackForce: 1
+  knockbackForce: 0.3
   hitDelay: 0.3
   attackCooldown: 0.6
   healthBar: {fileID: 6259167163331899114}
@@ -324,6 +324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot: {fileID: 1373852149006481858, guid: c5f3d6ef315d52b4988bd53856b9a1f0, type: 3}
+  dropChance: 0.3
 --- !u!1001 &8549591544949204688
 PrefabInstance:
   m_ObjectHideFlags: 0

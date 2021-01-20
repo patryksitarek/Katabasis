@@ -229,8 +229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faction: 0
-  attackDamage: 20
-  maxHealth: 150
+  attackDamage: 70
+  maxHealth: 1500
   attackRange: 0.5
   attackWidth: 0.8
   knockbackForce: 1

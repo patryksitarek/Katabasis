@@ -15,6 +15,7 @@ public class LootDropper : MonoBehaviour
     {
         if (Random.value <= dropChance)
         {
+            Debug.Log("[test] Dropping loot");
             loot = GameObject.Instantiate<GameObject>(loot, transform.position, transform.rotation);
             loot.transform.parent = null;
         }

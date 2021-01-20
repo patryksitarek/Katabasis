@@ -11,6 +11,7 @@ TagManager:
   - speedBoost
   - coin
   - resistBoost
+  - Enemy
   layers:
   - Default
   - TransparentFX
