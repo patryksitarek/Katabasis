@@ -10,6 +10,7 @@ public class GameFlowController : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject gameOverMenu;
     public GameObject levelCompleteMenu;
+    public AudioClip winMusic;
     public LevelMusic levelMusic;
 
     public bool isPaused { private set; get; } = false;
@@ -80,6 +81,7 @@ public class GameFlowController : MonoBehaviour
     public void OnLevelComplete()
     {
         fade.FadeOut(.4f);
+        AudioManager.Instance.PlayMusic(winMusic);
         StartCoroutine(ToggleMenu(levelCompleteMenu, 1f, true));
     }
 }

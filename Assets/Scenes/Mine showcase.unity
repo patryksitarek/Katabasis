@@ -1465,12 +1465,12 @@ PrefabInstance:
     - target: {fileID: 4348393330168644174, guid: 7065a32ad52460f48a627e88d2a7b833,
         type: 3}
       propertyPath: dialogAuthor
-      value: Martial hero
+      value: Bandit Swordsman
       objectReference: {fileID: 0}
     - target: {fileID: 4348393330168644174, guid: 7065a32ad52460f48a627e88d2a7b833,
         type: 3}
       propertyPath: dialogueLines.Array.data[0]
-      value: dared you come all the way here? Get him! Alive or dead!
+      value: You dare come back here? Get him, dead or alive!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7065a32ad52460f48a627e88d2a7b833, type: 3}
@@ -2056,12 +2056,12 @@ PrefabInstance:
     - target: {fileID: 4348393330168644174, guid: 7065a32ad52460f48a627e88d2a7b833,
         type: 3}
       propertyPath: dialogAuthor
-      value: Bandit
+      value: Bandit Commander
       objectReference: {fileID: 0}
     - target: {fileID: 4348393330168644174, guid: 7065a32ad52460f48a627e88d2a7b833,
         type: 3}
       propertyPath: dialogueLines.Array.data[0]
-      value: He's still alive! What a shame, let's kill him!
+      value: He's still alive! What are you doing!? Don't let him through!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7065a32ad52460f48a627e88d2a7b833, type: 3}

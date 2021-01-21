@@ -1414,7 +1414,7 @@ PrefabInstance:
     - target: {fileID: 4348393330168644174, guid: 7065a32ad52460f48a627e88d2a7b833,
         type: 3}
       propertyPath: dialogueLines.Array.data[0]
-      value: watch out, he's alive, he's back! The Lord will pay us double for his
+      value: Watch out, he's alive, he's back! The Lord will pay us double for his
         head!
       objectReference: {fileID: 0}
     - target: {fileID: 4348393330168644174, guid: 7065a32ad52460f48a627e88d2a7b833,
@@ -5831,6 +5831,11 @@ PrefabInstance:
       propertyPath: dAuthor
       value: 
       objectReference: {fileID: 2029495725}
+    - target: {fileID: 7692925288142792135, guid: b0c5d711056f5474caca15445ee91d9d,
+        type: 3}
+      propertyPath: dialogActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7692925288142792136, guid: b0c5d711056f5474caca15445ee91d9d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7480,7 +7485,7 @@ PrefabInstance:
     - target: {fileID: 4348393330168644174, guid: 7065a32ad52460f48a627e88d2a7b833,
         type: 3}
       propertyPath: dialogueLines.Array.data[0]
-      value: Good to see you! Our kingdom have waited many hard years for this moment.
+      value: Good to see you! Our kingdom has waited many hard years for this moment!
         After the final battle, the world is in darkness and hunger. We live in hiding
         and poverty.
       objectReference: {fileID: 0}
@@ -7488,7 +7493,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueLines.Array.data[1]
       value: 'This time is over! Now is the time to fulfill the prophecy, restore
-        glory and the good name of our nation. '
+        glory and the good name of our Nation. '
       objectReference: {fileID: 0}
     - target: {fileID: 4348393330168644174, guid: 7065a32ad52460f48a627e88d2a7b833,
         type: 3}

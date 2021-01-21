@@ -651,6 +651,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 2337131875554572031}
   gameOverMenu: {fileID: 2337131875089534249}
   levelCompleteMenu: {fileID: 2337131875183183823}
+  winMusic: {fileID: 8300000, guid: f4d7e6f7a9a5dc94cae95f025ffc81e1, type: 3}
   levelMusic: {fileID: 0}
 --- !u!1 &2337131874653188667
 GameObject:

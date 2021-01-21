@@ -890,13 +890,12 @@ PrefabInstance:
     - target: {fileID: 4348393330168644174, guid: 7065a32ad52460f48a627e88d2a7b833,
         type: 3}
       propertyPath: dialogAuthor
-      value: Martial hero
+      value: Bandit Swordsman
       objectReference: {fileID: 0}
     - target: {fileID: 4348393330168644174, guid: 7065a32ad52460f48a627e88d2a7b833,
         type: 3}
       propertyPath: dialogueLines.Array.data[0]
-      value: The enemy is here, full steam ahead! Let's get it over until the lord
-        gets to know this madman.
+      value: The enemy is here, charge! Let's get it over with before the Lord arrives!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7065a32ad52460f48a627e88d2a7b833, type: 3}
